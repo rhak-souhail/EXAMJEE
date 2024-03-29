@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://primefaces.org/ui ">
+<h:head>
+    <title>Liste des Employés</title>
+</h:head>
+<h:body>
+    <h2>Liste des Employés</h2>
+    <p:dataTable var="employe" value="#{employeController.allEmployes}" paginator="true" rows="10">
+        <p:column headerText="ID">
+            <h:outputText value="#{employe.id}"/>
+        </p:column>
+        <p:column headerText="Nom">
+            <h:outputText value="#{employe.name}"/>
+        </p:column>
+        <p:column headerText="Email">
+            <h:outputText value="#{employe.email}"/>
+        </p:column>
+        <p:column headerText="Skill">
+            <h:outputText value="#{employe.skill}"/>
+        </p:column>
+        <p:column headerText="Projets">
+            <h:outputText value="#{employe.projects}"/>
+        </p:column>
+    </p:dataTable>
+</h:body>
+</html>
